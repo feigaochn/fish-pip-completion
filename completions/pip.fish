@@ -22,7 +22,7 @@ function __fish_pip_search_packages
   if [ (count $cmd) -gt 2 ]
     set q $cmd[-1]
     set dir (dirname (status --current-filename))
-    python $dir/pip_install_completion.py $q
+    python $dir/pip_install_completion.py $q 2>/dev/null
   end
 end
 
